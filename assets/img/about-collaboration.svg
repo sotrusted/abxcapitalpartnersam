@@ -1,0 +1,95 @@
+<svg width="1200" height="675" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <defs>
+    <radialGradient id="circleGrad">
+      <stop offset="0%" style="stop-color:#4ea3ff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4ea3ff;stop-opacity:0.4" />
+    </radialGradient>
+    <filter id="glowCircle">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="1200" height="675" fill="#0b0f16"/>
+  
+  <!-- Central connecting lines (appear after circles form) -->
+  <g opacity="0" stroke="#4ea3ff" stroke-width="1.5" fill="none">
+    <line x1="600" y1="337.5" x2="750" y2="207.5"/>
+    <line x1="600" y1="337.5" x2="880" y2="337.5"/>
+    <line x1="600" y1="337.5" x2="750" y2="467.5"/>
+    <line x1="600" y1="337.5" x2="600" y2="537.5"/>
+    <line x1="600" y1="337.5" x2="450" y2="467.5"/>
+    <line x1="600" y1="337.5" x2="320" y2="337.5"/>
+    <line x1="600" y1="337.5" x2="450" y2="207.5"/>
+    <line x1="600" y1="337.5" x2="600" y2="137.5"/>
+    <animate attributeName="opacity" from="0" to="0.3" begin="2.5s" dur="0.8s" fill="freeze"/>
+  </g>
+  
+  <!-- Circles - start random, move to formation -->
+  <!-- Center circle -->
+  <circle r="35" fill="url(#circleGrad)" filter="url(#glowCircle)">
+    <animate attributeName="cx" from="200" to="600" dur="2s" fill="freeze"/>
+    <animate attributeName="cy" from="150" to="337.5" dur="2s" fill="freeze"/>
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" fill="freeze"/>
+  </circle>
+  
+  <!-- Top -->
+  <circle r="28" fill="url(#circleGrad)" filter="url(#glowCircle)" opacity="0.85">
+    <animate attributeName="cx" from="900" to="600" dur="2.2s" fill="freeze"/>
+    <animate attributeName="cy" from="500" to="137.5" dur="2.2s" fill="freeze"/>
+    <animate attributeName="opacity" from="0" to="0.85" dur="0.5s" fill="freeze"/>
+  </circle>
+  
+  <!-- Top-right -->
+  <circle r="28" fill="url(#circleGrad)" filter="url(#glowCircle)" opacity="0.85">
+    <animate attributeName="cx" from="400" to="750" dur="2.4s" fill="freeze"/>
+    <animate attributeName="cy" from="600" to="207.5" dur="2.4s" fill="freeze"/>
+    <animate attributeName="opacity" from="0" to="0.85" dur="0.5s" fill="freeze"/>
+  </circle>
+  
+  <!-- Right -->
+  <circle r="28" fill="url(#circleGrad)" filter="url(#glowCircle)" opacity="0.85">
+    <animate attributeName="cx" from="150" to="880" dur="2.1s" fill="freeze"/>
+    <animate attributeName="cy" from="250" to="337.5" dur="2.1s" fill="freeze"/>
+    <animate attributeName="opacity" from="0" to="0.85" dur="0.5s" fill="freeze"/>
+  </circle>
+  
+  <!-- Bottom-right -->
+  <circle r="28" fill="url(#circleGrad)" filter="url(#glowCircle)" opacity="0.85">
+    <animate attributeName="cx" from="1000" to="750" dur="2.3s" fill="freeze"/>
+    <animate attributeName="cy" from="100" to="467.5" dur="2.3s" fill="freeze"/>
+    <animate attributeName="opacity" from="0" to="0.85" dur="0.5s" fill="freeze"/>
+  </circle>
+  
+  <!-- Bottom -->
+  <circle r="28" fill="url(#circleGrad)" filter="url(#glowCircle)" opacity="0.85">
+    <animate attributeName="cx" from="350" to="600" dur="2.5s" fill="freeze"/>
+    <animate attributeName="cy" from="200" to="537.5" dur="2.5s" fill="freeze"/>
+    <animate attributeName="opacity" from="0" to="0.85" dur="0.5s" fill="freeze"/>
+  </circle>
+  
+  <!-- Bottom-left -->
+  <circle r="28" fill="url(#circleGrad)" filter="url(#glowCircle)" opacity="0.85">
+    <animate attributeName="cx" from="800" to="450" dur="2.2s" fill="freeze"/>
+    <animate attributeName="cy" from="450" to="467.5" dur="2.2s" fill="freeze"/>
+    <animate attributeName="opacity" from="0" to="0.85" dur="0.5s" fill="freeze"/>
+  </circle>
+  
+  <!-- Left -->
+  <circle r="28" fill="url(#circleGrad)" filter="url(#glowCircle)" opacity="0.85">
+    <animate attributeName="cx" from="950" to="320" dur="2.4s" fill="freeze"/>
+    <animate attributeName="cy" from="300" to="337.5" dur="2.4s" fill="freeze"/>
+    <animate attributeName="opacity" from="0" to="0.85" dur="0.5s" fill="freeze"/>
+  </circle>
+  
+  <!-- Top-left -->
+  <circle r="28" fill="url(#circleGrad)" filter="url(#glowCircle)" opacity="0.85">
+    <animate attributeName="cx" from="600" to="450" dur="2.1s" fill="freeze"/>
+    <animate attributeName="cy" from="550" to="207.5" dur="2.1s" fill="freeze"/>
+    <animate attributeName="opacity" from="0" to="0.85" dur="0.5s" fill="freeze"/>
+  </circle>
+</svg>
+
