@@ -1,0 +1,86 @@
+<svg width="1200" height="600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600">
+  <defs>
+    <linearGradient id="lineGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4ea3ff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#4ea3ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lineGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6ec9ff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#6ec9ff;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="lineGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8ed4ff;stop-opacity:0.3" />
+      <stop offset="100%" style="stop-color:#8ed4ff;stop-opacity:1" />
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <rect width="1200" height="600" fill="#05070a"/>
+  
+  <!-- Grid lines -->
+  <g opacity="0.15">
+    <line x1="0" y1="120" x2="1200" y2="120" stroke="#4ea3ff" stroke-width="1"/>
+    <line x1="0" y1="240" x2="1200" y2="240" stroke="#4ea3ff" stroke-width="1"/>
+    <line x1="0" y1="360" x2="1200" y2="360" stroke="#4ea3ff" stroke-width="1"/>
+    <line x1="0" y1="480" x2="1200" y2="480" stroke="#4ea3ff" stroke-width="1"/>
+    
+    <line x1="200" y1="0" x2="200" y2="600" stroke="#4ea3ff" stroke-width="1"/>
+    <line x1="400" y1="0" x2="400" y2="600" stroke="#4ea3ff" stroke-width="1"/>
+    <line x1="600" y1="0" x2="600" y2="600" stroke="#4ea3ff" stroke-width="1"/>
+    <line x1="800" y1="0" x2="800" y2="600" stroke="#4ea3ff" stroke-width="1"/>
+    <line x1="1000" y1="0" x2="1000" y2="600" stroke="#4ea3ff" stroke-width="1"/>
+  </g>
+  
+  <!-- Animated line 1 -->
+  <path d="M 0,350 L 100,320 L 200,340 L 300,280 L 400,300 L 500,250 L 600,270 L 700,220 L 800,240 L 900,200 L 1000,180 L 1100,160 L 1200,140" 
+        stroke="url(#lineGrad1)" 
+        stroke-width="3" 
+        fill="none" 
+        filter="url(#glow)"
+        stroke-dasharray="1200"
+        stroke-dashoffset="1200">
+    <animate attributeName="stroke-dashoffset" from="1200" to="0" dur="3s" fill="freeze"/>
+  </path>
+  
+  <!-- Animated line 2 -->
+  <path d="M 0,400 L 100,390 L 200,370 L 300,360 L 400,340 L 500,320 L 600,310 L 700,280 L 800,270 L 900,250 L 1000,240 L 1100,220 L 1200,200" 
+        stroke="url(#lineGrad2)" 
+        stroke-width="2.5" 
+        fill="none" 
+        filter="url(#glow)"
+        opacity="0.7"
+        stroke-dasharray="1200"
+        stroke-dashoffset="1200">
+    <animate attributeName="stroke-dashoffset" from="1200" to="0" dur="3.5s" fill="freeze"/>
+  </path>
+  
+  <!-- Animated line 3 -->
+  <path d="M 0,420 L 100,410 L 200,420 L 300,400 L 400,390 L 500,400 L 600,380 L 700,370 L 800,350 L 900,340 L 1000,320 L 1100,310 L 1200,280" 
+        stroke="url(#lineGrad3)" 
+        stroke-width="2" 
+        fill="none" 
+        filter="url(#glow)"
+        opacity="0.5"
+        stroke-dasharray="1200"
+        stroke-dashoffset="1200">
+    <animate attributeName="stroke-dashoffset" from="1200" to="0" dur="4s" fill="freeze"/>
+  </path>
+  
+  <!-- Subtle ambient circles -->
+  <circle cx="200" cy="340" r="4" fill="#4ea3ff" opacity="0">
+    <animate attributeName="opacity" from="0" to="0.8" dur="0.5s" begin="0.5s" fill="freeze"/>
+  </circle>
+  <circle cx="600" cy="270" r="4" fill="#4ea3ff" opacity="0">
+    <animate attributeName="opacity" from="0" to="0.8" dur="0.5s" begin="1.5s" fill="freeze"/>
+  </circle>
+  <circle cx="1000" cy="180" r="5" fill="#4ea3ff" opacity="0">
+    <animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="2.5s" fill="freeze"/>
+  </circle>
+</svg>
+
